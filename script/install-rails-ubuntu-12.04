@@ -2,7 +2,9 @@ sudo apt-get install curl libsqlite3-ruby git-core patch \
    build-essential bison zlib1g-dev libssl-dev libxml2-dev \
    libxml2-dev sqlite3 libsqlite3-dev autotools-dev \
    libxslt1-dev libyaml-0-2 autoconf automake libreadline6-dev \
-   libyaml-dev libtool
+   libyaml-dev libtool libgraphicsmagick3 libmagic1 libmagick++4 \
+   libmagickcore4 libmagickcore4-extra libmagickwand-dev \
+   perlmagick libmagickwand4 imagemagick
 curl -L https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 rvm pkg install zlib --verify-downloads 1
