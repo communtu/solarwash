@@ -19,8 +19,8 @@ class GraphController < ApplicationController
 
     #g.title = "Gruff-o-Rama"
     
-    g.data("Verbrauch", [1, 2, 3, 4, 4, 4, 4, 5, 5, 5, 4, 5, 6, 7, 6, 6, 5, 5, 5, 4, 4, 4, 4, 3])
-    g.data("Produktion", [0, 1, 2, 3, 3, 3, 3, 4, 4, 4, 3, 4, 5, 6, 5, 5, 4, 4, 4, 3, 3, 3, 3, 2])
+    g.data("Verbrauch", [2+rand(1), 2+rand(2), 2+rand(3), 2+rand(4), 2+rand(4), 2+rand(4), 2+rand(4), 2+rand(5), 2+rand(5), 2+rand(5), 2+rand(4), 2+rand(5), 2+rand(6), 2+rand(7), 2+rand(6), 2+rand(6), 2+rand(5), 2+rand(5), 2+rand(5), 2+rand(4), 2+rand(4), 2+rand(4), 2+rand(4), 2+rand(3)])
+    g.data("Produktion", [2+rand(0), 2+rand(1), 2+rand(2), 2+rand(3), 2+rand(3), 2+rand(3), 2+rand(3), 2+rand(4), 2+rand(4), 2+rand(4), 2+rand(3), 2+rand(4), 2+rand(5), 2+rand(6), 2+rand(5), 2+rand(5), 2+rand(4), 2+rand(4), 2+rand(4), 2+rand(3), 2+rand(3), 2+rand(3), 2+rand(3), 2+rand(2)])
 
     g.labels = {0 => '00:00', 6 => '06:00', 12 => '12:00', 18 => '18:00', 24 => '00:00'}
 
