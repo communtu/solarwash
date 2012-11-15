@@ -17,10 +17,10 @@ class GraphController < ApplicationController
      }
 #     g.font = File.expand_path('artwork/fonts/VeraBd.ttf', RAILS_ROOT)
 
-    g.title = "Gruff-o-Rama"
+    #g.title = "Gruff-o-Rama"
     
-    g.data("Produktion", [1, 2, 3, 4, 4, 4, 4, 5, 5, 5, 4, 5, 6, 7, 6, 6, 5, 5, 5, 4, 4, 4, 4, 3])
-    g.data("Verbrauch", [0, 1, 2, 3, 3, 3, 3, 4, 4, 4, 3, 4, 5, 6, 5, 5, 4, 4, 4, 3, 3, 3, 3, 2])
+    g.data("Verbrauch", [1, 2, 3, 4, 4, 4, 4, 5, 5, 5, 4, 5, 6, 7, 6, 6, 5, 5, 5, 4, 4, 4, 4, 3])
+    g.data("Produktion", [0, 1, 2, 3, 3, 3, 3, 4, 4, 4, 3, 4, 5, 6, 5, 5, 4, 4, 4, 3, 3, 3, 3, 2])
 
     g.labels = {0 => '00:00', 6 => '06:00', 12 => '12:00', 18 => '18:00', 24 => '00:00'}
 
