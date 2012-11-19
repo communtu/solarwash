@@ -11,7 +11,7 @@ class GraphController < ApplicationController
     # Uncomment to use your own theme or font
     # See http://colourlovers.com or http://www.firewheeldesign.com/widgets/ for color ideas
      g.theme = {
-       :colors => ['red','#8D440B', '#ffcc01',   '#cc9966', '#99cc99'],
+       :colors => ['#d90d02','#ff5904', '#FFEA01',   '#cc9966', '#99cc99'],
        :marker_color => 'black',
        :background_colors => ['white', 'white']
      }
@@ -25,7 +25,7 @@ class GraphController < ApplicationController
     (0..23).each do |i|
       e[i] = [v[i],p[i]].min
     end
-    g.data("Verbrauch", v)
+    g.data("externer Verbrauch", v)
     g.data("solarer Verbrauch", e)
     g.data("Produktion", p)
 
