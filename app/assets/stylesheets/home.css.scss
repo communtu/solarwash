@@ -12,9 +12,18 @@
 }
 
 #main {
+    height: 600px;
+    width: 850px;
+    background-image: url(SolarWashBackground.png);
     padding: 0;
 }
 
+#graph {
+    padding: 0;
+        margin-left:4.5em;
+        top:11.5em;
+        position:absolute;
+}
 #footer {
     padding: 0;
 }
