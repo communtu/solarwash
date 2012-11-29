@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  time: 2012-11-29 11:28:10
+  solar: 1
+  external: 1
+
+two:
+  time: 2012-11-29 11:28:10
+  solar: 1
+  external: 1
