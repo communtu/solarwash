@@ -24,10 +24,10 @@ class GraphController < ApplicationController
     stop = session[:start]+session[:scale]
     wash = Energylog.where("time >= :start and time <= :stop",
     {:start => session[:start], :stop => stop})
-    v = 
-    p = 
-    s = wash.map
-    end
+    v = wash.map(&:external)
+    p = wash.map(&:solar)
+    s = wash.map{|e|[e.solar, e.external].min}
+ 
     g.data("externer Verbrauch", v)
     g.data("solarer Verbrauch", s)
     g.data("Produktion", p)
