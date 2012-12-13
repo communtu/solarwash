@@ -58,6 +58,10 @@ SolarWash::Application.routes.draw do
   root :to => 'home#home'
 
   resources :graph
+  
+  match '/:controller(/:action(/:id))'
+  
+#  match '/home/update_graph/ => 'home#update_graph'
 
 #  map.graph "graph/:action/:id/image.png", :controller => "graph"
   

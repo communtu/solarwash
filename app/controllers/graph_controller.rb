@@ -18,7 +18,7 @@ class GraphController < ApplicationController
 #    g.font = File.expand_path('artwork/fonts/VeraBd.ttf', RAILS_ROOT)
     if session[:start].nil? then 
       session[:start] = Date.today.to_time+21600 # set start time to today, 6am
-      session[:scale] = 720*60
+      session[:scale] = 720*60 # half a day
     end
     stop = session[:start]+session[:scale]
     wash = Energylog.where("time >= :start and time <= :stop",
@@ -35,5 +35,9 @@ class GraphController < ApplicationController
     
     send_data(g.to_blob, :disposition => 'inline', :type => 'image/png', :filename => "gruff.png")
   end
-
+  def zoom_in_graph
+    session[:scale] /= 2
+    logger.debug "scale: #{session[:scale]}"
+    render "/home/update_graph/"
+  end
 end

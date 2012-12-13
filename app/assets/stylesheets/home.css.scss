@@ -23,7 +23,7 @@
     
 }
 
-#graph {
+#graph_with_buttons {
     padding: 0;
         margin-left:4.5em;
         top:11.5em;
@@ -31,4 +31,11 @@
 }
 #footer {
     padding: 0;
+}
+#navigation {
+    float:right;
+    padding-top:75px;
+}
+
+#graph {
 }

@@ -12,9 +12,14 @@
 <div id="main">
 	<br />
 	<h1>SolarWash-Infoseite</h1>
-	<div id="graph">
-	   <%= image_tag "/graph/show", :width => "500"%>
-           <%= image_tag "sq_plus_icon.png"%>
+	<div id="graph_with_buttons">
+	  <%= image_tag "/graph/show", :width => "500", :id => "graph"%>
+          <div id="navigation">
+           <div><%= link_to(image_tag("sq_plus_icon.png"),{:controller => "graph", :action => "zoom_in_graph"}, :remote => true)%></div>
+           <div><%= image_tag "sq_minus_icon.png"%></div>
+           <div><%= image_tag "sq_br_next.png"%></div>
+           <div><%= image_tag "sq_br_prev.png"%></div>
+          </div>
 	</div>
 </div>
 
