@@ -10,11 +10,10 @@ class GraphController < ApplicationController
     g = Gruff::Area.new
     # Uncomment to use your own theme or font
     # See http://colourlovers.com or http://www.firewheeldesign.com/widgets/ for color ideas
- #    g. render_transparent_background
      g.theme = {
        :colors => ['#d90d02','#ff5904', '#FFEA01',   '#cc9966', '#99cc99'],
        :marker_color => 'black', 
-       :background_colors => ['white', 'white']
+       :background_colors  => 'transparent'
      }
 #    g.font = File.expand_path('artwork/fonts/VeraBd.ttf', RAILS_ROOT)
     if session[:start].nil? then 
@@ -34,10 +33,7 @@ class GraphController < ApplicationController
 
     g.labels = {0 => '00:00', 360 => '06:00', 720 => '12:00', 1080 => '18:00', 1439 => '00:00'}
     
-    g.write("gruff.png")
-    system "convert gruff.png -transparent white gruff1.png"
-    send_file("gruff1.png", :disposition => 'inline', :type => 'image/png', :filename => "gruff.png")
-    #send_data(g.to_blob, :disposition => 'inline', :type => 'image/png', :filename => "gruff.png")
+    send_data(g.to_blob, :disposition => 'inline', :type => 'image/png', :filename => "gruff.png")
   end
 
 end
