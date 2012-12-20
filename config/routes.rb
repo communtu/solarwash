@@ -57,7 +57,7 @@ SolarWash::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
   root :to => 'home#home'
 
-  resources :graph
+#  resources :graph
   
   match '/:controller(/:action(/:id))'
   
