@@ -1,4 +1,4 @@
 
 #!/usr/bin/env bash
-rvm --create use ruby-1.9.3@SolarWash
+rvm --create use ruby-1.9.2@SolarWash
 
