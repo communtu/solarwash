@@ -37,7 +37,18 @@ class GraphController < ApplicationController
   end
   def zoom_in_graph
     session[:scale] /= 2
-    logger.debug "scale: #{session[:scale]}"
+    render "/home/update_graph/"
+  end
+  def zoom_out_graph
+    session[:scale] *= 2
+    render "/home/update_graph/"
+  end
+  def scope_to_past_graph
+    session[:start] -= session[:scale]/2 # go 6h back
+    render "/home/update_graph/"
+  end
+  def scope_to_future_graph
+    session[:start] += session[:scale]/2 # go 6h back
     render "/home/update_graph/"
   end
 end

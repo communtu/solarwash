@@ -17,9 +17,9 @@
 	</div>
 	          <div id="navigation">
            <div><%= link_to(image_tag("sq_plus_icon.png"),{:controller => "graph", :action => "zoom_in_graph"}, :remote => true)%></div>
-           <div><%= image_tag "sq_minus_icon.png"%></div>
-           <div><%= image_tag "sq_br_next.png"%></div>
-           <div><%= image_tag "sq_br_prev.png"%></div>
+           <div><%= link_to(image_tag("sq_minus_icon.png"),{:controller => "graph", :action => "zoom_out_graph"}, :remote => true)%></div>
+           <div><%= link_to(image_tag("sq_br_next.png"),{:controller => "graph", :action => "scope_to_past_graph"}, :remote => true)%></div>
+           <div><%= link_to(image_tag("sq_br_prev.png"),{:controller => "graph", :action => "scope_to_future_graph"}, :remote => true)%></div>
           </div>
 
 </div>
