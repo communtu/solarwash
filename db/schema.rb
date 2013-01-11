@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121129102810) do
+ActiveRecord::Schema.define(:version => 20130102181459) do
 
   create_table "energylogs", :force => true do |t|
     t.datetime "time"
@@ -20,5 +20,8 @@ ActiveRecord::Schema.define(:version => 20121129102810) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "energylogs", ["time"], :name => "index_energylogs_on_time"
+  add_index "energylogs", ["time"], :name => "time_idx"
 
 end
